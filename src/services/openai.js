@@ -1,4 +1,5 @@
 const { openai } = require('../config');
+const fs = require('fs');
 
 async function transcribeAudio(filePath) {
 	const transcription = await openai.audio.transcriptions.create({
